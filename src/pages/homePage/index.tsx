@@ -16,7 +16,7 @@ const HomePage = () => {
           <div className="w-1 h-1 bg-pastor-blue rounded-full"></div>
           <p className="mxxss:text-sm mxxxs:text-xs mxs:text-center">ENUGU, NIGERIA</p>
         </div>
-        <div className="my-6 flex justify-center items-center gap-2">
+        <div className="my-6 flex justify-center items-center gap-1">
           <CountdownTimer targetDate={targetDate}/>
           <p className="text-lg">DAYS TO GO!</p>
         </div>
