@@ -26,6 +26,16 @@ export default {
         mxxxs: { max: "320px" },
         "ms-height": { raw: "(max-height: 700px)" },
         "mxl-height": { raw: "(max-height: 850px)" },
+      },
+      colors:{
+        "lcc-yellow": "#FEE2B7",
+        "tochi-brown": "#974C15",
+        "ifeoma-green": "#60803A",
+        "pastor-blue": "#002550"
+      },
+      fontFamily: {
+        playwrite: ["Playwrite US Trad", "cursive"],
+        averta: ["Averta", "sans serif"]
       }
     },
   },

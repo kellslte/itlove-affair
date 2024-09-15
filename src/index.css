@@ -1,3 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-Extrathin.otf");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-ExtrathinItalic.otf");
+  font-weight: 100;
+  font-style: italic;
+}
+
+@font-face{
+  font-family: "Averta";
+  src: url("/fonts/Averta-Thin.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: "Averta";
+  src: url("/fonts/Averta-ThinItalic.otf");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-Light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-LightItalic.otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-RegularItalic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-Semibold.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-SemiboldItalic.otf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-Bold.otf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-BoldItalic.otf");
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-ExtraBold.otf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-ExtraBoldItalic.otf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-Black.otf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/Averta-BlackItalic.otf");
+  font-weight: 800;
+  font-style: italic;
+}
+
+:root{
+  --lcc-yellow: #FEE2B7;
+  --tochi-brown: #974C15;
+  --ifeoma-green: #60803A;
+  --pastor-blue: #002550;
+}
