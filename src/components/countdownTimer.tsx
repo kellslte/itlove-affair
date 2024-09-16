@@ -6,7 +6,9 @@ interface CountdownTimerProps {
 
 interface TimeLeft {
   days?: number;
-  
+  hours?: number;
+  minutes?: number;
+  seconds?: number;
 }
 
 const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
@@ -17,7 +19,9 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     if (difference > 0) {
       timeLeft = {
         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-        
+        hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
       };
     }
 
@@ -38,15 +42,15 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   }, [timeLeft, targetDate]);
 
   return (
-    <div className="flex gap-4 text-center text-lg">
+    <div className="flex gap-4 text-center text-3xl font-medium">
       {Object.keys(timeLeft).map((interval) => (
         <div key={interval} className="relative">
           {/* Previous value sliding out */}
           <div
             className={`absolute inset-0 text-pastor-blue transition-transform duration-500 ease-in-out ${
               prevTimeLeft[interval as keyof TimeLeft] !== timeLeft[interval as keyof TimeLeft]
-                ? "-translate-y-full opacity-0"
-                : ""
+                ? ""
+                : "opacity-0"
             }`}
           >
             {prevTimeLeft[interval as keyof TimeLeft]}
@@ -56,12 +60,15 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
           <div
             className={`relative z-10 text-pastor-blue transition-transform duration-500 ease-in-out ${
               prevTimeLeft[interval as keyof TimeLeft] !== timeLeft[interval as keyof TimeLeft]
-                ? " opacity-100"
+                ? "opacity-0"
                 : ""
             }`}
           >
             {timeLeft[interval as keyof TimeLeft]}
           </div>
+
+          {/* Label */}
+          <p className="text-sm text-gray-500">{interval}</p>
         </div>
       ))}
     </div>
