@@ -6,9 +6,9 @@ const InfoSection = () => {
     <section className="w-full min-h-[30vh] relative bg-lcc-yellow px-24 py-24 flex justify-between items-center text-tochi-brown font-playwrite mlg:flex-col mmd:px-12 mxs:px-10">
       <div className="w-[40%] flex flex-col justify-center items-center text-center mlg:w-full mxxss:w-[80%]">
         <div>
-          <p className="text-xl mb-8 mxs:text-sm">When</p>
-          <p className="text-[2rem] mb-4 mxs:text-2xl mxxss:text-sm">Saturday, October 26, 2024</p>
-          <p className="text-2xl mb-36 mlg:mb-6 mxs:text-xl mxxss:text-sm">11am (WAT)</p>
+          <p className="text-xl mb-8 font-semibold mxs:text-sm">When</p>
+          <p className="text-[2rem] mb-4 font-normal mxs:text-2xl mxxss:text-sm">Saturday, October 26, 2024</p>
+          <p className="text-2xl mb-36 font-light mlg:mb-6 mxs:text-xl mxxss:text-sm">11am (WAT)</p>
         </div>
 
         <Link
@@ -21,9 +21,9 @@ const InfoSection = () => {
       <div className="bg-tochi-brown mlg:w-[80%] mlg:h-[0.0625rem] mlg:my-20 mxs:w-full mxs:my-10"></div>
       <div className="w-[40%] flex flex-col justify-center items-center text-center mlg:w-full mxxss:w-[80%]">
         <div>
-          <p className="text-xl mb-8 mxs:text-sm">Where</p>
-          <p className="text-[2rem] mb-4 mxs:text-sm">Destiny Event Centre</p>
-          <p className="text-2xl mb-24 mlg:mb-6 mxs:text-xl mxxss:text-sm">
+          <p className="text-xl mb-8 font-semibold mxs:text-sm">Where</p>
+          <p className="text-[2rem] mb-4 font-normal mxs:text-lg">Destiny Event Centre</p>
+          <p className="text-2xl mb-24 font-light mlg:mb-6 mxs:text-base mxxss:text-sm">
             45c Nza Street by New Haven, Linked Road, Independence Layout, Enugu
           </p>
         </div>
