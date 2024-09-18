@@ -1,5 +1,5 @@
 import { Navigation } from "../../components";
-import { HeroSection, InfoSection, LoveSection, WishSection, PhotoGallerySection } from "./components";
+import { HeroSection, InfoSection, LoveSection, WishSection, PhotoGallerySection, TestimonialSection } from "./components";
 
 const HomePage = () => {
   return (
@@ -12,6 +12,7 @@ const HomePage = () => {
       <LoveSection />
       <WishSection />
       <PhotoGallerySection/>
+      <TestimonialSection/>
     </section>
   );
 };
