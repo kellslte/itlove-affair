@@ -1,8 +1,34 @@
-import { CountdownTimer } from "../../../components";
+import { useState, useEffect } from "react";
+import { CountdownTimer, CountupTimer } from "../../../components";
 import { RightBottom, MainImage } from "../../../assets";
+import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
+
 
 const HeroSection = () => {
-  const targetDate = "2024-10-26T00:00:00";
+  const [weddingDone, setWeddingDone] = useState<boolean>(false);
+  const [weddingToday, setWeddingToday] = useState<boolean>(false);
+
+  const targetDate = "2024-10-26T00:00:00"; //Date of the wedding
+
+  const checkTodayDate = (date: string) => {
+    const todayDate = new Date().toISOString().split('T')[0];
+    const targetDate = date.split('T')[0]
+    if (todayDate < targetDate) {
+      setWeddingDone(false);
+      setWeddingToday(false);
+
+    } else if (todayDate > targetDate) {
+      setWeddingDone(true);
+      setWeddingToday(false);
+    }else if (todayDate === targetDate){
+      setWeddingDone(true);
+      setWeddingToday(true);
+    }
+  };
+
+  useEffect(() => {
+    checkTodayDate(targetDate);
+  }, [targetDate]);
 
   return (
     <section className="w-screen h-screen flex flex-col relative overflow-visible">
@@ -21,10 +47,22 @@ const HeroSection = () => {
             ENUGU, NIGERIA
           </p>
         </div>
-        <div className="my-6 flex justify-center items-center gap-1 mxxss:flex-col">
-          <CountdownTimer targetDate={targetDate} />
-          <p className="text-lg"> TO GO!</p>
-        </div>
+        {weddingToday ? (
+          <div className="my-6 flex justify-center items-center gap-1 mxxss:flex-col">
+            <p className="text-lg">IT'S TODAY!</p>
+            <Fireworks autorun={{speed: 3, duration: 999999}}/>
+          </div>
+        ) : !weddingDone ? (
+          <div className="my-6 flex justify-center items-center gap-1 mxxss:flex-col">
+            <CountdownTimer targetDate={targetDate} />
+            <p className="text-lg">TO GO!</p>
+          </div>
+        ) : (
+          <div className="my-6 flex justify-center items-center gap-1 mxxss:flex-col">
+            <CountupTimer targetDate={targetDate} />
+            <p className="text-lg">GONE!</p>
+          </div>
+        )}
         <div className="w-full h-full">
           <img
             src={MainImage}

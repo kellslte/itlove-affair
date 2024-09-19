@@ -8,6 +8,10 @@ import PstTochiImg from "./pst_tochi.png";
 import Gal1 from "./gal-1.webp";
 import Gal2 from "./gal-2.webp";
 import Gal3 from "./gal-3.webp";
+import NextIcon from "./next-icon.svg";
+import PreviousIcon from "./prev-icon.svg";
+import MblNextIcon from "./mbl-next-icon.svg";
+import MblPrevIcon from "./mbl-prev-icon.svg"
 
 export {
   LeftBottom,
@@ -19,5 +23,9 @@ export {
   PstTochiImg,
   Gal1,
   Gal2,
-  Gal3
+  Gal3,
+  NextIcon,
+  PreviousIcon,
+  MblNextIcon,
+  MblPrevIcon
 };
