@@ -105,10 +105,10 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
         } transition-transform duration-300 ease-in-out`}
       >
         <div className="w-full h-14 bg-lcc-yellow flex justify-between items-center px-6">
-          <p className="font-playwrite font-normal text-pastor-blue">
+          <p className="font-playwrite font-normal text-pastor-blue mxxxs:text-sm">
             #Ifeoma&Tochi
           </p>
-          <button onClick={closeNav} className="relative w-6 h-6 flex flex-col justify-center items-center">
+          <button onClick={closeNav} className="relative w-6 h-6 flex flex-col justify-center items-center mxxxs:w-2 mxxxs:h-2">
             <span className="absolute w-6 h-0.5 bg-pastor-blue transform rotate-45"></span>
             <span className="absolute w-6 h-0.5 bg-pastor-blue transform -rotate-45"></span>
           </button>
