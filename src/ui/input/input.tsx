@@ -15,6 +15,8 @@ const Input: FC<InputProps> = (props) => {
     formState: { errors },
   } = useFormContext();
 
+  console.log(errors)
+
 
   return(
     <div className="flex flex-col">
