@@ -7,7 +7,7 @@ const Navigation = () => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
   const navLinks = [
-    { link: "Wishlist", route: "#" },
+    { link: "Wishlist", route: "/wishlist" },
     { link: "Download Program", route: "#" },
   ];
 
@@ -23,7 +23,9 @@ const Navigation = () => {
 
   return (
     <nav className="flex justify-between items-center px-24 py-4 mlg:px-14 mxs:px-10">
-      <p className="font-averta font-normal text-pastor-blue">#Ifeoma&Tochi</p>
+      <p className="font-averta font-normal text-pastor-blue">
+        <Link to="/">#Ifeoma&Tochi</Link>
+      </p>
       {!isSmallDevice ? (
         <div className="flex items-center justify-center gap-4">
           {navLinks.map((navLink, index) => (
@@ -108,7 +110,10 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
           <p className="font-playwrite font-normal text-pastor-blue mxxxs:text-sm">
             #Ifeoma&Tochi
           </p>
-          <button onClick={closeNav} className="relative w-6 h-6 flex flex-col justify-center items-center mxxxs:w-2 mxxxs:h-2">
+          <button
+            onClick={closeNav}
+            className="relative w-6 h-6 flex flex-col justify-center items-center mxxxs:w-2 mxxxs:h-2"
+          >
             <span className="absolute w-6 h-0.5 bg-pastor-blue transform rotate-45"></span>
             <span className="absolute w-6 h-0.5 bg-pastor-blue transform -rotate-45"></span>
           </button>

@@ -18,7 +18,7 @@ const PhotoGallerySection = () => {
                 src={firsts}
                 alt="Gallery"
                 key={index}
-                className="max-w-auto h-80 rounded-lg mr-8 object-cover mmd:max-w-48"
+                className="max-w-auto h-80 rounded-lg mr-8 object-cover mmd:max-w-48 mxs:h-64"
               />
             ))}
           </Marquee>
@@ -26,7 +26,7 @@ const PhotoGallerySection = () => {
         <div>
         <Marquee pauseOnHover = {false} speed={25} direction="right">
           {secondArr.map((seconds, index) => (
-            <img src={seconds} alt="Gallery" key={index} className="max-w-auto h-80 rounded-lg mr-8 object-cover mmd:max-w-48"/>
+            <img src={seconds} alt="Gallery" key={index} className="max-w-auto h-80 rounded-lg mr-8 object-cover mmd:max-w-48 mxs:h-64"/>
           ))}
         </Marquee>
         </div>
