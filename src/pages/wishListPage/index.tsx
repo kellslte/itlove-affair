@@ -1,7 +1,7 @@
 import { Navigation } from "../../components";
 
-import { Input } from "../../ui";
-import { useForm, FormProvider } from "react-hook-form";
+// import { Input } from "../../ui";
+// import { useForm, FormProvider } from "react-hook-form";
 
 const WishListPage = () => {
   const methods = useForm()
