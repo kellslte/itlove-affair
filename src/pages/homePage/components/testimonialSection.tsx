@@ -13,12 +13,12 @@ const TestimonialSection = () => {
       author: "Obianuju Afamefuna",
     },
     {
-      testimony: "Hold on, my pastors are getting married? I thought they were just great at teamwork during church events! Pastor Tochi Sir and Pastor Ifeoma Ma, I’m so excited for you both. Wishing you a marriage full of love, joy and everything beautiful. Congratulations!",
+      testimony: "Hold on, my pastors are getting married? Pastor Tochi Sir and Pastor Ifeoma Ma, I’m so excited for you both. Wishing you a marriage full of love, joy and everything beautiful. Congratulations!",
       author: "Edozie Onyeanusi",
     },
     {
-      testimony: "Even in death. We won!",
-      author: "Jubilee",
+      testimony: "May your union be blessed with love, joy, abundance and unwavering faith in each other, and may you continue to inspire all of us with the strength of your commitment. Here is to a lifetime of happiness together.",
+      author: "Jubilee Edeh",
     },
   ];
 
