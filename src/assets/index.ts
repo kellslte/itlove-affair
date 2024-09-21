@@ -17,7 +17,11 @@ import Gal9 from "./gal-9.webp";
 import NextIcon from "./next-icon.svg";
 import PreviousIcon from "./prev-icon.svg";
 import MblNextIcon from "./mbl-next-icon.svg";
-import MblPrevIcon from "./mbl-prev-icon.svg"
+import MblPrevIcon from "./mbl-prev-icon.svg";
+import Car from "./wish-car.webp";
+import Gen from "./wish-gen.webp";
+import Fridge from "./wish-fridge.webp";
+import Wash from "./wish-wash-mach.webp";
 
 export {
   LeftBottom,
@@ -39,5 +43,9 @@ export {
   NextIcon,
   PreviousIcon,
   MblNextIcon,
-  MblPrevIcon
+  MblPrevIcon,
+  Car,
+  Gen,
+  Fridge,
+  Wash
 };

@@ -123,3 +123,6 @@
   --pastor-blue: #002550;
 }
 
+button:disabled, button[disabled]{
+  cursor: not-allowed;
+}
