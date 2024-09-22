@@ -8,17 +8,17 @@ const Navigation = () => {
 
   const navLinks = [
     { link: "Wishlist", route: "/wishlist" },
-    { link: "Download Program", route: "#" },
+    { link: "View Program", route: "/program" },
   ];
 
   const [mblNavOpen, setMblNavOpen] = useState<boolean>(false);
 
   const openMblNav = () => {
-    setMblNavOpen((prev) => !prev); // Toggle menu
+    setMblNavOpen((prev) => !prev); 
   };
 
   const closeMblNav = () => {
-    setMblNavOpen(false); // Close menu
+    setMblNavOpen(false); 
   };
 
   return (
@@ -93,7 +93,6 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
 
   return (
     <>
-      {/* Overlay for closing menu when clicking outside */}
       {isOpen && (
         <div
           className="fixed inset-0 z-30 bg-black bg-opacity-50"
@@ -124,7 +123,7 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
               to={navLink.route}
               key={index}
               className="text-pastor-blue "
-              onClick={closeNav} // Close the menu when a link is clicked
+              onClick={closeNav} 
             >
               {navLink.link}
             </Link>
