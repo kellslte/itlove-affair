@@ -1,4 +1,5 @@
 import { Button } from "../../../ui";
+import { Link } from "react-router-dom";
 
 const WishSection = () => {
   return (
@@ -18,7 +19,9 @@ const WishSection = () => {
           </p>
         </div>
 
-        <Button text="See our wishlist" />
+        <Link to="/wishlist">
+          <Button text="See our wishlist" />
+        </Link>
       </div>
     </section>
   );

@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, [targetDate]);
 
   return (
-    <section className="w-screen h-screen flex flex-col relative overflow-visible">
+    <section className="w-screen h-[90vh] flex flex-col relative overflow-visible">
       <div className="flex-grow px-24 flex flex-col items-center mlg:px-14 mxs:px-10">
         <div className="mb-6 mlg:mt-6 mmd:mt-8 msm:mt-10 mxs:mt-12">
           <p className="font-playwrite text-4xl mxxss:text-2xl">
