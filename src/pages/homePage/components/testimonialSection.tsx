@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { RightTop, LeftBottom, NextIcon, PreviousIcon} from "../../../assets";
-
+import { RightTop, LeftBottom } from "../../../assets";
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -53,24 +53,25 @@ const TestimonialSection = () => {
         <div className="w-full absolute top-[50%] translate-y-[-50%] z-[50] flex items-center justify-between gap-2 mt-4">
           <button
             onClick={() => swiperInstance?.slidePrev()}
-            className="absolute -left-8 p-4 w-16 h-16 rounded-full border-white border-2 bg-white/30 backdrop-blur-lg transition-all duration-1000 ease-in-out hover:shadow-[0_8px_32px_rgba(31,38,135,0.37)] mxs:w-10 mxs:h-10"
+            className="flex justify-center items-center absolute -left-8 p-4 w-16 h-16 rounded-full border-white border-2 bg-white/30 backdrop-blur-lg transition-all duration-1000 ease-in-out hover:shadow-[0_8px_32px_rgba(31,38,135,0.37)] mxs:w-14 mxs:h-14"
           >
-            <img src={PreviousIcon} alt="" width={50} height={50}/>
+            
+            <FiArrowLeft color="white" size={80}/>
           </button>
           <button
             onClick={() => swiperInstance?.slideNext()}
-            className="absolute -right-8 p-4 w-16 h-16 rounded-full border-white border-2 bg-white/30 backdrop-blur-lg transition-all duration-1000 ease-in-out hover:shadow-[0_8px_32px_rgba(31,38,135,0.37)] mxs:w-10 mxs:h-10"
+            className="flex justify-center items-center absolute -right-8 p-4 w-16 h-16 rounded-full border-white border-2 bg-white/30 backdrop-blur-lg transition-all duration-1000 ease-in-out hover:shadow-[0_8px_32px_rgba(31,38,135,0.37)] mxs:w-14 mxs:h-14"
           >
-            <img src={NextIcon} alt="" width={50} height={50}/>
+            <FiArrowRight color="white" size={80}/>
           </button>
         </div>
       </div>
 
       <div className="absolute z-50 top-0 right-0">
-        <img src={RightTop} alt="Flower Design" width={200} height={200} />
+        <img src={RightTop} alt="Flower Design" width={250} height={250} />
       </div>
       <div className="absolute z-50 bottom-0 left-0">
-        <img src={LeftBottom} alt="Flower Design" width={200} height={200} />
+        <img src={LeftBottom} alt="Flower Design" width={250} height={250} />
       </div>
     </section>
   );

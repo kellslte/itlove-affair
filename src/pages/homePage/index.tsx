@@ -4,7 +4,7 @@ import { HeroSection, InfoSection, LoveSection, WishSection, PhotoGallerySection
 const HomePage = () => {
   return (
     <section className="relative">
-      <div className="sticky top-0 z-[100] bg-white">
+      <div className="sticky top-0 z-[100] bg-white/30 backdrop-blur-lg">
         <Navigation />
       </div>
       <HeroSection />

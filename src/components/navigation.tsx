@@ -23,8 +23,8 @@ const Navigation = () => {
 
   return (
     <nav className="flex justify-between items-center px-24 py-4 mlg:px-14 mxs:px-10">
-      <p className="font-averta font-normal text-pastor-blue">
-        <Link to="/">#Ifeoma&Tochi</Link>
+      <p className="font-averta text-2xl font-normal text-pastor-blue">
+        <Link to="/">#ITloveaffair24</Link>
       </p>
       {!isSmallDevice ? (
         <div className="flex items-center justify-center gap-4">
@@ -32,7 +32,7 @@ const Navigation = () => {
             <Link
               to={navLink.route}
               key={index}
-              className="block font-normal hover:text-blue-700 transition-colors duration-300"
+              className="block text-lg font-normal hover:text-blue-800 transition-colors duration-300"
             >
               {navLink.link}
             </Link>
@@ -107,7 +107,7 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
       >
         <div className="w-full h-14 bg-lcc-yellow flex justify-between items-center px-6">
           <Link to ="/" className="font-playwrite font-normal text-pastor-blue mxxxs:text-sm">
-            #Ifeoma&Tochi
+            #ITLoveaffair24
           </Link>
           <button
             onClick={closeNav}

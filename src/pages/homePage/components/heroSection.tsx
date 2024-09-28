@@ -39,11 +39,11 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="flex justify-center items-center gap-6 ">
-          <p className="mxxss:text-sm mxxxs:text-xs mxs:text-center">
+          <p className="text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
             OCTOBER 26, 2024
           </p>
           <div className="w-1 h-1 bg-pastor-blue rounded-full"></div>
-          <p className="mxxss:text-sm mxxxs:text-xs mxs:text-center">
+          <p className="text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
             ENUGU, NIGERIA
           </p>
         </div>
@@ -76,8 +76,8 @@ const HeroSection = () => {
         <img
           src={RightBottom}
           alt="Flower Design at the Right Bottom"
-          width={200}
-          height={200}
+          width={250}
+          height={250}
         />
       </div>
     </section>
