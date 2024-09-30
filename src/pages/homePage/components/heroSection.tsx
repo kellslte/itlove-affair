@@ -31,7 +31,7 @@ const HeroSection = () => {
   }, [targetDate]);
 
   return (
-    <section className="w-screen h-screen flex flex-col relative overflow-visible">
+    <section className="w-screen h-[90vh] flex flex-col relative overflow-visible">
       <div className="flex-grow px-24 flex flex-col items-center mlg:px-14 mxs:px-10">
         <div className="mb-6 mlg:mt-6 mmd:mt-8 msm:mt-10 mxs:mt-12">
           <p className="font-playwrite text-4xl mxxss:text-2xl">
@@ -39,11 +39,11 @@ const HeroSection = () => {
           </p>
         </div>
         <div className="flex justify-center items-center gap-6 ">
-          <p className="mxxss:text-sm mxxxs:text-xs mxs:text-center">
+          <p className="text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
             OCTOBER 26, 2024
           </p>
           <div className="w-1 h-1 bg-pastor-blue rounded-full"></div>
-          <p className="mxxss:text-sm mxxxs:text-xs mxs:text-center">
+          <p className="text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
             ENUGU, NIGERIA
           </p>
         </div>
@@ -76,8 +76,8 @@ const HeroSection = () => {
         <img
           src={RightBottom}
           alt="Flower Design at the Right Bottom"
-          width={200}
-          height={200}
+          width={250}
+          height={250}
         />
       </div>
     </section>

@@ -37,7 +37,7 @@ const LoveSection = () => {
       </div>
 
       <div className="absolute z-50 top-0 left-0 ">
-        <img src={LeftTop} alt="Flower Design" width={200} height={200} />
+        <img src={LeftTop} alt="Flower Design" width={250} height={250} />
       </div>
     </section>
   );
