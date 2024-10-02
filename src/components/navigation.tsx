@@ -117,7 +117,7 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
             <span className="absolute w-6 h-0.5 bg-pastor-blue transform -rotate-45"></span>
           </button>
         </div>
-        <div className="flex flex-col p-6 space-y-4">
+        <div className="flex flex-col p-6 space-y-4 bg-white h-full">
           {navLinks.map((navLink, index) => (
             <Link
               to={navLink.route}

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { CountdownTimer, CountupTimer } from "../../../components";
-import { RightBottom, MainImage } from "../../../assets";
+import { RightBottom } from "../../../assets";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 
 
