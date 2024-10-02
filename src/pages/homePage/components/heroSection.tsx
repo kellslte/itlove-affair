@@ -55,7 +55,7 @@ const HeroSection = () => {
         ) : !weddingDone ? (
           <div className="my-6 flex justify-center items-center gap-1 mxxss:flex-col">
             <CountdownTimer targetDate={targetDate} />
-            <p className="text-lg">TO GO!</p>
+            {/* <p className="text-lg mb-4">TO GO!</p> */}
           </div>
         ) : (
           <div className="my-6 flex justify-center items-center gap-1 mxxss:flex-col">
@@ -65,7 +65,7 @@ const HeroSection = () => {
         )}
         <div className="w-full h-full">
           <img
-            src={MainImage}
+            src={'https://res.cloudinary.com/tochukwu/image/upload/v1727827837/wedding/main-image.webp'}
             alt="Pastors' Image"
             className="max-h-[33%] w-full object-cover rounded-3xl mlg:max-h-[45%] msm:max-h-[55%] mxs:max-h-[80%] mxxxs:max-h-[100%]:"
             style={{ objectPosition: "0% 30%" }}
