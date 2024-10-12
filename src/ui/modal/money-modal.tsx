@@ -12,7 +12,7 @@ interface ModalProps {
   title?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
+const MoneyModal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
   const [submitting, setSubmitting] = useState<boolean>(false);
 
   const methods = useForm<z.infer<typeof makeAWishSchema>>({
@@ -26,21 +26,26 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
   // Watch the value of the 'amount' field
   const amountValue = watch("amount", 0);
 
-  const makeWish = async (data: z.infer<typeof makeAWishSchema>) => {
+  const makeWish = async (cashInfo: z.infer<typeof makeAWishSchema>) => {
     
     setSubmitting(true);
   
     try {
-      const res = await donateCash({
-        amount: data.amount,
+      const { data } = await donateCash({
+        amount: cashInfo.amount,
         type: 'cash',
         sender: {
-          name: data.fullname,
-          email: data.email
+          name: cashInfo.fullname,
+          email: cashInfo.email
         }
       })
+
+      const checkout_url = await data?.data?.checkout_url
+      if (checkout_url) {
+        window.location.href = checkout_url;
+      }
       setSubmitting(false);
-      console.log(res)
+      console.log(data)
     } catch (err) {
       console.log(err);
       setSubmitting(false);
@@ -109,4 +114,4 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
   );
 };
 
-export { Modal };
+export { MoneyModal }

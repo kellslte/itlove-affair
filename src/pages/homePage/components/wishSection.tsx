@@ -1,13 +1,26 @@
+import { useState } from "react";
 import { Button } from "../../../ui";
 import { Link } from "react-router-dom";
+import { MoneyModal } from "../../../ui/modal/money-modal";
 
 const WishSection = () => {
+  // const [selectedOption, setSelectedOption] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className="w-full h-auto bg-ifeoma-green flex items-center justify-center py-24 mxxs:px-4">
       <div className="w-[50%] flex items-center justify-center flex-col mmd:w-[70%] mxxs:w-[100%]">
         <div>
           <p className="text-[2rem] font-semibold text-white text-center mxxss:text-2xl">
-            Want to contribute to our wedding and our marriage?
+            Looking to be part of our big day?
           </p>
         </div>
 
@@ -18,11 +31,19 @@ const WishSection = () => {
             here.
           </p>
         </div>
-
-        <Link to="/wishlist">
+       
+       <div className="flex space-x-4">
+       <Link to="/wishlist">
           <Button text="See our wishlist" />
         </Link>
+        <div className="bg-[#E0B807] rounded-full" onClick={openModal}>
+          <Button text="Send Cash" customClassName="text-white bg-[#E0B807]" />
+        </div>
+       </div>
       </div>
+      {
+        isModalOpen &&  <MoneyModal isOpen={isModalOpen} onClose={closeModal} title={'Cash'} />
+      }
     </section>
   );
 };
