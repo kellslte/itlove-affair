@@ -18,7 +18,6 @@ const HomePage = () => {
       <div className="relative z-[80]">
         <InfoSection />
       </div>
-
       <LoveSection />
       <WishSection />
       <PhotoGallerySection />
