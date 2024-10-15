@@ -22,7 +22,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center px-24 py-4 mlg:px-14 mxs:px-10">
+    <nav className="bg-transparent flex justify-between items-center px-24 py-4 mlg:px-14 mxs:px-10">
       <p className="font-averta text-2xl font-normal text-pastor-blue">
         <Link to="/">#ITloveaffair24</Link>
       </p>
@@ -95,17 +95,17 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
     <>
       {isOpen && (
         <div
-          className="fixed inset-0 z-30 bg-black bg-opacity-50"
+          className="fixed inset-0 z-[80] bg-black bg-opacity-50"
           onClick={closeNav}
         ></div>
       )}
 
       <div
-        className={`mobile-nav fixed top-0 left-0 h-full w-2/3 bg-white shadow-lg z-40 transform ${
+        className={`mobile-nav fixed top-0 left-0 w-2/3 bg-white shadow-lg z-[100] transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } transition-transform duration-300 ease-in-out`}
       >
-        <div className="w-full h-14 bg-lcc-yellow flex justify-between items-center px-6">
+        <div className="w-full h-16 bg-lcc-yellow flex justify-between items-center px-6">
           <Link to ="/" className="font-playwrite font-normal text-pastor-blue mxxxs:text-sm">
             #ITLoveaffair24
           </Link>
@@ -117,7 +117,7 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
             <span className="absolute w-6 h-0.5 bg-pastor-blue transform -rotate-45"></span>
           </button>
         </div>
-        <div className="flex flex-col p-6 space-y-4">
+        <div className="flex flex-col p-6 space-y-4 bg-white h-full">
           {navLinks.map((navLink, index) => (
             <Link
               to={navLink.route}
