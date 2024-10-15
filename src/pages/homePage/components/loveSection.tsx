@@ -1,4 +1,4 @@
-import { LeftTop, PstIfeomaImg, PstTochiImg } from "../../../assets";
+import { LeftTop } from "../../../assets";
 
 const LoveSection = () => {
   return (
@@ -7,9 +7,13 @@ const LoveSection = () => {
         <p className="text-3xl font-playwrite mmd:text-xl">Our Love Story</p>
       </div>
 
-      <div className="w-full flex justify-between items-center gap-6 mb-8 mmd:flex-col">
+      {/* <div className="w-full flex justify-between items-center gap-6 mb-8 mmd:flex-col">
         <div className="w-[50%] mmd:w-full">
-          <img src={PstIfeomaImg} alt="Pastor Ifeoma's Picture" className="w-full h-[23.125rem] object-cover object-top rounded-3xl" />
+          <img
+            src={PstIfeomaImg}
+            alt="Pastor Ifeoma's Picture"
+            className="w-full h-[23.125rem] object-cover object-top rounded-3xl"
+          />
         </div>
 
         <div className="w-[50%] flex flex-col gap-6 mmd:w-full">
@@ -20,19 +24,24 @@ const LoveSection = () => {
           </p>
           <p className="font-playwrite text-2xl">- Ifeoma</p>
         </div>
-      </div>
+      </div> */}
 
       <div className="w-full flex justify-between items-center gap-6 mt-8 mmd:flex-col-reverse">
         <div className="w-[50%] flex flex-col gap-6 mmd:w-full">
           <p className="text-2xl mxs:text-lg">
-            “My Pastor who has now become my love!! I really have now words to
+            “My Pastor who has now become my love!! I really have no words to
             say. I know the rest of my life is about to be the best of my life
             because of my union to this man”
           </p>
-          <p className="font-playwrite text-2xl">- Tochi</p>
+          <p className="font-playwrite text-2xl">- Tochi & Ifeoma</p>
         </div>
         <div className="w-[50%] mmd:w-full">
-          <img src={PstTochiImg} alt="Pastor Tochi's Picture" className="w-full h-[23.125rem] object-cover rounded-3xl" style={{objectPosition: "0% 5%"}}/>
+          <img
+            src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831558/wedding/vintage-goofy.webp`}
+            alt="Pastor Tochi's Picture"
+            className="w-full h-[23.125rem] object-cover rounded-3xl"
+            style={{ objectPosition: "0% 5%" }}
+          />
         </div>
       </div>
 
