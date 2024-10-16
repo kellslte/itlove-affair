@@ -78,15 +78,15 @@ const HeroSection = () => {
           <motion.div
             className="h-auto w-[18rem] absolute bg-white z-40 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
             style={{ x: x1, y: y1, rotate: -10 }}
-            transition={{ duration: 40, ease: "anticipate", delay: 4 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
             <img src={Gal1} alt="" className="w-full h-full bg-cover p-2" />
           </motion.div>
 
           <motion.div
             className="h-auto w-[18rem] bg-white absolute z-30 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
-            style={{ x: x2, y: y2, rotate: 20 }}
-            transition={{ duration: 40, ease: "anticipate", delay: 4 }}
+            style={{ x: x2, y: y2, rotate: 5 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
             <img src={Gal3} alt="" className="w-full h-full bg-cover p-2" />
           </motion.div>
@@ -94,7 +94,7 @@ const HeroSection = () => {
           <motion.div
             className="h-auto w-[18rem] bg-white absolute z-20 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
             style={{ x: x3, y: y3, rotate: 21 }}
-            transition={{ duration: 40, ease: "anticipate", delay: 4 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
             <img src={Gal2} alt="" className="w-full h-full bg-cover p-2" />
           </motion.div>
@@ -102,7 +102,7 @@ const HeroSection = () => {
           <motion.div
             className="h-auto w-[18rem] bg-white absolute z-10 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
             style={{ x: x4, y: y4, rotate: -15 }}
-            transition={{ duration: 40, ease: "anticipate", delay: 4 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
             <img src={Gal10} alt="" className="w-full h-full bg-cover p-2" />
           </motion.div>

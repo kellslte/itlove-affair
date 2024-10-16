@@ -1,30 +1,61 @@
-
 .loader {
-  color: var(--tochi-brown);
-  width: 6px;
-  aspect-ratio: 1;
-  border-radius: 50%; 
-  
-  animation:
-    l37-1 .75s infinite linear alternate,
-    l37-2 1.5s  infinite linear; 
-}
-@keyframes l37-1 {
-  0%,
-  20% {box-shadow:30px 0 0 3px, 10px 0 0 3px, -10px 0 0 3px,-30px 0 0 3px}
-  60%,
-  100% {box-shadow:12px 0 0 3px, 14px 0 0 6px, -14px 0 0 6px,-12px 0 0 3px}
+  animation: rotate 1s infinite;
+  height: 50px;
+  width: 50px;
 }
 
-@keyframes l37-2 {
-  0%,25%   {
-    transform: rotate(0);
-    color: var(--tochi-brown);
-    transition: color 1.5s ease-in-out;
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;
+  background-color: var(--ifeoma-green);
+  box-shadow: 30px 0 0 var(--tochi-brown);
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite;
+  background-color: var(--tochi-brown);
+  box-shadow: 30px 0 0 var(--ifeoma-green);
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) scale(0.8) }
+  50% { transform: rotate(360deg) scale(1.2) }
+  100% { transform: rotate(720deg) scale(0.8) }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 var(--tochi-brown);
   }
-  50%,100% {
-    transform: rotate(.5turn);
-    color: var(--ifeoma-green);
-    transition: color 1.5s ease-in-out;
+  50% {
+    box-shadow: 0 0 0 var(--tochi-brown);
+    margin-bottom: 0;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 var(--tochi-brown);
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 var(--ifeoma-green);
+  }
+  50% {
+    box-shadow: 0 0 0 var(--ifeoma-green);
+    margin-top: -20px;
+    transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 var(--ifeoma-green);
+    margin-top: 0;
   }
 }

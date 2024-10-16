@@ -6,7 +6,7 @@ import { MoneyModal } from "../../../ui/modal/money-modal";
 const WishSection = () => {
   // const [selectedOption, setSelectedOption] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -31,19 +31,22 @@ const WishSection = () => {
             here.
           </p>
         </div>
-       
-       <div className="flex space-x-4">
-       <Link to="/wishlist">
-          <Button text="See our wishlist" />
-        </Link>
-        <div className="bg-[#E0B807] rounded-full" onClick={openModal}>
-          <Button text="Send Cash" customClassName="text-white bg-[#E0B807]" />
+
+        <div className="flex space-x-4">
+          <Link to="/wishlist">
+            <Button text="See our wishlist" />
+          </Link>
+          <div className="bg-[#E0B807] rounded-full" onClick={openModal}>
+            <Button
+              text="Send Cash"
+              customClassName="text-white bg-[#E0B807]"
+            />
+          </div>
         </div>
-       </div>
       </div>
-      {
-        isModalOpen &&  <MoneyModal isOpen={isModalOpen} onClose={closeModal} title={'Cash'} />
-      }
+      {isModalOpen && (
+        <MoneyModal isOpen={isModalOpen} onClose={closeModal} title={"Cash"} />
+      )}
     </section>
   );
 };
