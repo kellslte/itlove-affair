@@ -1,8 +1,4 @@
-import React from "react";
-
-type Props = {};
-
-const SuccessPage = (props: Props) => {
+const SuccessPage = () => {
   return (
     <div className="bg-gray-100 h-screen">
       <div className="bg-white p-6  md:mx-auto">
@@ -37,4 +33,4 @@ const SuccessPage = (props: Props) => {
   );
 };
 
-export default { SuccessPage };
+export { SuccessPage };
