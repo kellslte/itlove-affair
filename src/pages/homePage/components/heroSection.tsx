@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { CountdownTimer, CountupTimer } from "../../../components";
-import { RightBottom, Gal1, Gal2, Gal3, Gal10 } from "../../../assets";
+import { RightBottom, Gal1, } from "../../../assets";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 
@@ -80,7 +80,7 @@ const HeroSection = () => {
             style={{ x: x1, y: y1, rotate: -10 }}
             transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
-            <img src={Gal1} alt="" className="w-full h-full bg-cover p-2" />
+            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727827837/wedding/main-image.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
           </motion.div>
 
           <motion.div
@@ -88,7 +88,7 @@ const HeroSection = () => {
             style={{ x: x2, y: y2, rotate: 5 }}
             transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
-            <img src={Gal3} alt="" className="w-full h-full bg-cover p-2" />
+            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/vintage-normal.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
           </motion.div>
 
           <motion.div
@@ -96,7 +96,7 @@ const HeroSection = () => {
             style={{ x: x3, y: y3, rotate: 21 }}
             transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
-            <img src={Gal2} alt="" className="w-full h-full bg-cover p-2" />
+            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/main-close.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
           </motion.div>
 
           <motion.div
@@ -104,7 +104,7 @@ const HeroSection = () => {
             style={{ x: x4, y: y4, rotate: -15 }}
             transition={{ duration: 50, ease: "easeIn", delay: 10 }}
           >
-            <img src={Gal10} alt="" className="w-full h-full bg-cover p-2" />
+            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831558/wedding/vintage-goofy.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
           </motion.div>
 
           {weddingToday ? (

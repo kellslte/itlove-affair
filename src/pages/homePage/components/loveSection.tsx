@@ -1,6 +1,36 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { LeftTop } from "../../../assets";
 
 const LoveSection = () => {
+  const photo1 = `https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/vintage-normal.webp`;
+  const photo2 = `https://res.cloudinary.com/tochukwu/image/upload/v1727831559/wedding/vintage-cute.webp`;
+  const photo3 = `https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/jve5bas0nj7jvf5dnfcn.webp`;
+  const photo4 = `https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/main-close.webp`;
+  const photo5 = `https://res.cloudinary.com/tochukwu/image/upload/v1727831558/wedding/vintage-goofy.webp`;
+
+  const photos = [photo1, photo2, photo3, photo4, photo5];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Automatically cycle through the photos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === photos.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [photos]);
+
+  // Animation variants for fading in and out
+  const fadeVariant = {
+    enter: { opacity: 0, scale: 0.95 },
+    center: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.95 },
+  };
+
   return (
     <section className="relative bg-white px-24 py-24 flex flex-col justify-center items-center mxs:p-10">
       <div className="text-center mb-20 mmd:mb-10">
@@ -16,13 +46,22 @@ const LoveSection = () => {
           </p>
           <p className="font-playwrite text-2xl">- Tochi & Ifeoma</p>
         </div>
-        <div className="w-[50%] mmd:w-full">
-          <img
-            src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831558/wedding/vintage-goofy.webp`}
-            alt="Pastor Tochi's Picture"
-            className="w-full h-[23.125rem] object-cover rounded-3xl"
-            style={{ objectPosition: "0% 5%" }}
-          />
+        
+        <div className="w-[50%] mmd:w-full relative">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={currentIndex}
+              src={photos[currentIndex]} // Only render the current image
+              alt="Pastors' Picture"
+              className="w-full h-[30rem] object-cover rounded-3xl"
+              style={{ objectPosition: "0% 5%" }}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              variants={fadeVariant}
+              transition={{ duration: 0.8 }} // Adjust the duration of fade
+            />
+          </AnimatePresence>
         </div>
       </div>
 

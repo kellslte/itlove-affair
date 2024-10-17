@@ -3,6 +3,7 @@ import { Navigation } from "../../components";
 import { WishItem } from "./components";
 import { Modal } from "../../ui";
 import { Car, Gen, Fridge, Wash } from "../../assets";
+import { motion } from "framer-motion";
 
 const WishListPage = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,12 +45,18 @@ const WishListPage = () => {
   ];
 
   return (
-    <section className="">
+    <motion.section
+      className=""
+      initial={{ x: 2500 }}
+      animate={{ x: 1 }}
+      exit={{ x: 2500}}
+      transition={{duration: 0.3}}
+    >
       <section className="relative ">
         <div className="sticky top-0 z-[100] bg-white/30 backdrop-blur-lg">
           <Navigation />
         </div>
-        <section className="px-24 py-4 mlg:px-14 mxs:px-10">
+        <section className="bg-[#FFF2DE] min-h-screen px-24 py-4 mlg:px-14 mxs:px-10">
           <div>
             <p className="text-center font-[600] text-[2rem]">
               Our Wedding Wishlist
@@ -69,9 +76,13 @@ const WishListPage = () => {
       </section>
 
       {selectedWishItem && (
-        <Modal isOpen={isModalOpen} onClose={closeModal} title={selectedWishItem.title} />
+        <Modal
+          isOpen={isModalOpen}
+          onClose={closeModal}
+          title={selectedWishItem.title}
+        />
       )}
-    </section>
+    </motion.section>
   );
 };
 

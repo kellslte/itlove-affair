@@ -1,8 +1,14 @@
 import { Navigation } from "../../components";
+import { motion } from "framer-motion";
 
 const ProgramPage = () => {
   return (
-    <section>
+    <motion.section
+      initial={{ x: 2500 }}
+      animate={{ x: 1 }}
+      exit={{ x: 2500 }}
+      transition={{ duration: 0.3 }}
+    >
       <div className="sticky top-0 z-[100] bg-white/30 backdrop-blur-lg">
         <Navigation />
       </div>
@@ -11,7 +17,7 @@ const ProgramPage = () => {
           <p className="text-center font-[600] text-[2rem]">Program Page</p>
         </div>
       </section>
-    </section>
+    </motion.section>
   );
 };
 

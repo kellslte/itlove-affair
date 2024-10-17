@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Input } from "../input/input";
 import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
@@ -52,10 +52,25 @@ const MoneyModal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
     }
   };
 
+  // useEffect(() => {
+  //   if (isOpen) {
+  //     // Disable scroll when the modal is open
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     // Re-enable scroll when the modal is closed
+  //     document.body.style.overflow = "";
+  //   }
+
+  //   // Cleanup to ensure scrolling is re-enabled if the modal unmounts
+  //   return () => {
+  //     document.body.style.overflow = "";
+  //   };
+  // }, [isOpen]);
+
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[500] flex items-center justify-center bg-black bg-opacity-50" >
+    <div className="fixed inset-0 z-[500] flex items-center justify-center bg-black bg-opacity-50 " >
       <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-lg mx-auto py-5 px-7">
         <div className="flex flex-col">
           <div className="w-full flex justify-between">

@@ -56,7 +56,7 @@ const TestimonialSection = () => {
     {
       testimony:
         "I am overjoyed to celebrate with you as you begin this journey together. Your love and commitment to each other and to God are inspiring examples for us all. Your marriage will serve as a model of a Godly home. Congratulations, Pastor Sir and Ma!",
-      author: "Christian Bini-Okoh",
+      author: "Christiana Bini-Okoh",
     },
     {
       testimony: `This wedding has me super excited!!!!<br/> I'm "extremmmmmely" happy for Pastor Tochi and Pastor Ifeoma.🤭 <br/> Cheers to building a beautiful, godly home.<br/> Congratulations!`,
@@ -84,10 +84,10 @@ const TestimonialSection = () => {
           onSwiper={(swiper) => setSwiperInstance(swiper)}
           modules={[Autoplay]}
           autoplay={{
-            delay: 4000,
+            delay: 5000,
             disableOnInteraction: false
           }}
-          speed={1000}
+          speed={1300}
         >
           {slides.map((slide, i) => (
             <SwiperSlide key={i}>
