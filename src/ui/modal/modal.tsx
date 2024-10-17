@@ -4,7 +4,7 @@ import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { makeAWishSchema } from "./components/makeAWishSchema";
-import { donateCash, donateGift } from "../../api/api";
+import { donateGift } from "../../api/api";
 
 interface ModalProps {
   isOpen: boolean;

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Navigation } from "../../components";
 import { WishItem } from "./components";
 import { Modal } from "../../ui";
-import { Car, Gen, Fridge, Wash } from "../../assets";
+
 import { fetchGifts } from "../../api/api";
 
 const WishListPage = () => {
@@ -22,29 +22,6 @@ const WishListPage = () => {
     setIsModalOpen(false);
     setSelectedWishItem(null);
   };
-
-  const wishItems = [
-    {
-      image: Car,
-      title: "Toyota Camry 2023",
-      amount: "15,000,000",
-    },
-    {
-      image: Gen,
-      title: "Firman Generator",
-      amount: "550,000",
-    },
-    {
-      image: Fridge,
-      title: "Double Door LG Fridge",
-      amount: "345,000",
-    },
-    {
-      image: Wash,
-      title: "LG Washing Machine",
-      amount: "180,000",
-    },
-  ];
 
   useEffect(() => {
     const getGifts = async () => {
