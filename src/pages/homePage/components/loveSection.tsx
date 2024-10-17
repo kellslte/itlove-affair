@@ -23,7 +23,7 @@ const LoveSection = () => {
             because of my union to this man”
           </p>
           <p className="font-playwrite text-2xl">- Ifeoma</p>
-        </div>
+        </div> 
       </div> */}
 
       <div className="w-full flex justify-between items-center gap-6 mt-8 mmd:flex-col-reverse">

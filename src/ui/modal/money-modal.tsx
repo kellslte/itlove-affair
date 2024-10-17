@@ -10,6 +10,7 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
+  id?: string
 }
 
 const MoneyModal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
