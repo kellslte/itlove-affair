@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { CountdownTimer, CountupTimer } from "../../../components";
-import { RightBottom, Gal1, } from "../../../assets";
+import { RightBottom, } from "../../../assets";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 
