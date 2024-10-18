@@ -14,6 +14,8 @@ import Gal6 from "./gal-6.webp";
 import Gal7 from "./gal-7.webp";
 import Gal8 from "./gal-8.webp";
 import Gal9 from "./gal-9.webp";
+import Gal10 from "./gal-10.webp";
+import Gal11 from "./gal-11.webp";
 import NextIcon from "./next-icon.svg";
 import PreviousIcon from "./prev-icon.svg";
 import MblNextIcon from "./mbl-next-icon.svg";
@@ -40,6 +42,8 @@ export {
   Gal7,
   Gal8,
   Gal9,
+  Gal10,
+  Gal11,
   NextIcon,
   PreviousIcon,
   MblNextIcon,

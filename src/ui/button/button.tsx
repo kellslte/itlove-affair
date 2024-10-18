@@ -13,7 +13,7 @@ const Button: React.FC<BtnProps> = ({ text, customClassName, onClick, ...props }
   return (
     <button className={className} onClick={onClick} {...props}>
       {/* Text content with z-index */}
-      <span className="relative z-10 uppercase mxxss:text-sm">{text}</span>
+      <span className="relative z-10 uppercase mxs:text-xs">{text}</span>
 
       {/* Sliding background */}
       <span className="absolute inset-0 bg-[#E0B807] transform -translate-x-full transition-transform duration-500 ease-out group-hover:translate-x-0"></span>

@@ -42,12 +42,12 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   }, [timeLeft, targetDate]);
 
   return (
-    <div className="flex gap-4 text-center text-3xl font-medium">
+    <div className="flex gap-4 text-center text-3xl font-medium mxxss:gap-2">
       {Object.keys(timeLeft).map((interval) => (
         <div key={interval} className="relative">
           {/* Previous value sliding out */}
           <div
-            className={`absolute inset-0 text-pastor-blue transition-transform duration-500 ease-in-out ${
+            className={`absolute inset-0 text-tochi-brown transition-transform duration-500 ease-in-out ${
               prevTimeLeft[interval as keyof TimeLeft] !== timeLeft[interval as keyof TimeLeft]
                 ? ""
                 : "opacity-0"
@@ -58,7 +58,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
 
           {/* Current value sliding in */}
           <div
-            className={`relative z-10 text-pastor-blue transition-transform duration-500 ease-in-out ${
+            className={`relative z-10 text-tochi-brown transition-transform duration-500 ease-in-out ${
               prevTimeLeft[interval as keyof TimeLeft] !== timeLeft[interval as keyof TimeLeft]
                 ? "opacity-0"
                 : ""
@@ -68,7 +68,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
           </div>
 
           {/* Label */}
-          <p className="text-sm text-gray-500">{interval}</p>
+          <p className="text-tochi-brown text-sm">{interval}</p>
         </div>
       ))}
     </div>
