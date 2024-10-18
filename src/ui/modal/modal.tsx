@@ -70,7 +70,7 @@ const Modal: React.FC<ModalProps> = ({id, isOpen, onClose, title }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[500] transition duration-150 ease-in-out bg-black bg-opacity-50 pt-[15rem] mxs:pt-[5rem]">
+    <div className="fixed inset-0 z-[500] transition duration-150 ease-in-out bg-black bg-opacity-50 pt-[10rem] mxs:pt-[5rem]">
         <div
           className="bg-white rounded-lg shadow-lg w-[90%] max-w-lg mx-auto py-5 px-7"
         >
