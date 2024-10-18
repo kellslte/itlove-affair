@@ -12,7 +12,7 @@ import { motion } from "framer-motion";
 const HomePage = () => {
   return (
     <motion.section
-      className="relative"
+      className=""
       initial={{ x: 2500 }}
       animate={{ x: 1 }}
       exit={{ x: 2500}}
