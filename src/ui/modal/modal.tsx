@@ -4,16 +4,17 @@ import { useForm, FormProvider } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { makeAWishSchema } from "./components/makeAWishSchema";
-import { donateCash } from "../../api/api";
+import { donateGift } from "../../api/api";
 import { motion, AnimatePresence } from "framer-motion";
 
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   title?: string;
+  id: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
+const Modal: React.FC<ModalProps> = ({id, isOpen, onClose, title }) => {
   const [submitting, setSubmitting] = useState<boolean>(false);
 
   const methods = useForm<z.infer<typeof makeAWishSchema>>({
@@ -27,20 +28,25 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
   // Watch the value of the 'amount' field
   const amountValue = watch("amount", 0);
 
-  const makeWish = async (data: z.infer<typeof makeAWishSchema>) => {
+  const makeWish = async (giftInfo: z.infer<typeof makeAWishSchema>) => {
+    
     setSubmitting(true);
 
     try {
-      const res = await donateCash({
-        amount: data.amount,
-        type: "cash",
+      const { data } = await donateGift({
+        amount: giftInfo.amount,
+        type: 'cash',
         sender: {
-          name: data.fullname,
-          email: data.email,
-        },
-      });
+          name: giftInfo.fullname,
+          email: giftInfo.email
+        }
+      }, id)
+      const checkout_url = await data?.data?.checkout_url
+      if (checkout_url) {
+        window.location.href = checkout_url;
+      }
       setSubmitting(false);
-      console.log(res);
+      console.log(data)
     } catch (err) {
       console.log(err);
       setSubmitting(false);
