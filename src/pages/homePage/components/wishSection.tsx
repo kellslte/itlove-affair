@@ -7,8 +7,16 @@ const WishSection = () => {
   // const [selectedOption, setSelectedOption] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  const scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   const openModal = () => {
     setIsModalOpen(true);
+    scrollTop()
   };
 
   const closeModal = () => {
@@ -16,8 +24,8 @@ const WishSection = () => {
   };
 
   return (
-    <section className="w-full h-auto bg-ifeoma-green flex items-center justify-center py-24 mxxs:px-4">
-      <div className="w-[50%] flex items-center justify-center flex-col mmd:w-[70%] mxxs:w-[100%]">
+    <section className=" w-full h-auto bg-ifeoma-green flex items-center justify-center py-24 mxxs:px-4">
+      <div className="relative w-[50%] flex items-center justify-center flex-col mmd:w-[70%] mxxs:w-[100%]">
         <div>
           <p className="text-[2rem] font-semibold text-white text-center mxxss:text-2xl">
             Looking to be part of our big day?

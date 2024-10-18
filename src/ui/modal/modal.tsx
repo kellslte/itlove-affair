@@ -5,7 +5,6 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { makeAWishSchema } from "./components/makeAWishSchema";
 import { donateGift } from "../../api/api";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface ModalProps {
   isOpen: boolean;
@@ -71,13 +70,8 @@ const Modal: React.FC<ModalProps> = ({id, isOpen, onClose, title }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[500] flex items-center justify-center bg-black bg-opacity-50">
-      <AnimatePresence mode="wait" initial={false}>
-        <motion.div
-          initial={{ y: 1000 }}
-          animate={{ y: 1 }}
-          exit={{ y: 1000 }}
-          transition={{ duration: 0.2 }}
+    <div className="fixed inset-0 z-[500] transition duration-150 ease-in-out bg-black bg-opacity-50 pt-[15rem] mxs:pt-[5rem]">
+        <div
           className="bg-white rounded-lg shadow-lg w-[90%] max-w-lg mx-auto py-5 px-7"
         >
           <div className="flex flex-col">
@@ -135,8 +129,7 @@ const Modal: React.FC<ModalProps> = ({id, isOpen, onClose, title }) => {
               </form>
             </FormProvider>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </div>
     </div>
   );
 };

@@ -71,7 +71,7 @@ const MoneyModal: React.FC<ModalProps> = ({ isOpen, onClose, title }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed h-full w-full z-[500] flex items-center justify-center bg-black bg-opacity-50 " >
+    <div className="fixed inset-0 z-[500] transition duration-150 ease-in-out pt-[15rem] bg-black bg-opacity-50 mxs:pt-[5rem]">
       <div className="bg-white rounded-lg shadow-lg w-[90%] max-w-lg mx-auto py-5 px-7">
         <div className="flex flex-col">
           <div className="w-full flex justify-between">
