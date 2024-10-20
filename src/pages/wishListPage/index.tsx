@@ -81,7 +81,7 @@ const WishListPage = () => {
                 <WishItem
                   key={i}
                   title={wishItem.name}
-                  image={wishItem.image}
+                  url={wishItem.url}
                   id={wishItem._id}
                   donationComplete={wishItem.donationComplete}
                   amountDonated={wishItem.amountDonated}
