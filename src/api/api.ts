@@ -21,6 +21,16 @@ export const donateGift = async (donation: any, id: string) => {
   return await axios({
     method: "POST",
     url: `${baseUrl}/donate/${id}/gifts`,
-    data: donation,
+    data: {
+      ...donation,
+      callback_url: `${window.location.origin}/donate/success`,
+    },
   });
 };
+
+export const updateTransactionDetails = async (reference: string) => {
+  return await axios({
+    method: "GET",
+    url: `${baseUrl}/donate/transaction/${reference}/confirm`,
+  });
+}

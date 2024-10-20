@@ -12,14 +12,14 @@ interface WishItemsProps {
   donationComplete?: string;
 }
 
-const WishItem: React.FC<WishItemsProps> = ({ id, title, amount, url, onClick }) => {
+const WishItem: React.FC<WishItemsProps> = ({ id, title, amount, url, onClick, donationComplete }) => {
 
   const handleClick = () => {
     onClick({ title, id });
   };
 
   return (
-    <div className="h-auto w-auto p-4 border-[#EAECF0] border rounded-lg">
+    <div className={`w-full flex flex-col items-center justify-center gap-4 p-4 rounded-lg ${donationComplete ? 'hidden' : ''}`}>
       <div className="w-full h-64 bg-[#F5F6F8] rounded-lg">
         <img src={url} alt="Image of Wish Item" className="w-full h-full object-contain object-center" />
       </div>
