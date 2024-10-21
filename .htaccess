@@ -1,9 +1,0 @@
-# Enable RewriteEngine
-RewriteEngine On
-
-# Redirect all requests to index.html except files and directories
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-
-# Rewrite the requested URL to index.html
-RewriteRule ^ index.html [L]
