@@ -51,7 +51,7 @@ const LoveSection = () => {
             without diverse life’s twists and turns years before), and here we
             are today… in love with each other and finally getting married…”
           </p>
-          <p className="font-playwrite text-2xl">- Tochi & Ifeoma</p>
+          <p className="text-2xl">- Tochi & Ifeoma</p>
         </div>
 
         <div className="w-[50%] mmd:w-full relative">
