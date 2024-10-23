@@ -46,7 +46,7 @@ const LoveSection = () => {
             our shared interests - At the time, neither of us imagined it would
             become anything more. But we were in each other’s lives, served God
             together etc… attended conferences together, accompanied me to
-            different meetings, Years later, after we both had left school, we
+            different meetings. Years later, after we both had left school, we
             were more than assured we are made for each other (this is not
             without diverse life’s twists and turns years before), and here we
             are today… in love with each other and finally getting married…”
