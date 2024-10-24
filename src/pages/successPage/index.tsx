@@ -1,4 +1,22 @@
+import { useEffect } from "react";
+import { updateTransactionDetails } from "../../api/api";
+
 const SuccessPage = () => {
+
+  // get the query parameter from this page
+  const urlParams = new URLSearchParams(window.location.search);
+  const reference = urlParams.get('trxref');
+
+  useEffect(() => {
+    async function updateTransaction() {
+      const { data } = await updateTransactionDetails(reference!);
+
+      if (data?.success) setTimeout(() => window.location.replace('/'), 5000);
+    }
+
+    updateTransaction();
+  }, [reference]);
+
   return (
     <div className="bg-gray-100 h-screen">
       <div className="bg-white p-6  md:mx-auto">
@@ -21,7 +39,7 @@ const SuccessPage = () => {
           <p> Have a great day! </p>
           <div className="py-10 text-center">
             <a
-              href="#"
+              href="/"
               className="px-12 bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-3"
             >
               GO BACK

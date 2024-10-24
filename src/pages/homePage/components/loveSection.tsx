@@ -40,11 +40,18 @@ const LoveSection = () => {
       <div className="w-full flex justify-between items-center gap-6 mt-8 mmd:flex-col-reverse">
         <div className="w-[50%] flex flex-col gap-6 mmd:w-full">
           <p className="text-2xl mxs:text-lg">
-            “My Pastor who has now become my love!! I really have no words to
-            say. I know the rest of my life is about to be the best of my life
-            because of my union to this man”
+            “I first met Ifeoma when she came to write her exams in my school. I
+            was in my penultimate year of university at the time, We quickly
+            became good friends after she gained admission, bonding over many of
+            our shared interests - At the time, neither of us imagined it would
+            become anything more. But we were in each other’s lives, served God
+            together etc… attended conferences together, accompanied me to
+            different meetings. Years later, after we both had left school, we
+            were more than assured we are made for each other (this is not
+            without diverse life’s twists and turns years before), and here we
+            are today… in love with each other and finally getting married…”
           </p>
-          <p className="font-playwrite text-2xl">- Tochi & Ifeoma</p>
+          <p className="text-2xl">- Tochi & Ifeoma</p>
         </div>
 
         <div className="w-[50%] mmd:w-full relative">
