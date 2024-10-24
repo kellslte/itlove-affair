@@ -2,7 +2,7 @@ import { RightTop, LeftBottom } from "../../../assets";
 
 const InfoSection = () => {
   return (
-    <section className="w-full min-h-[30vh] relative bg-lcc-yellow px-24 py-24 flex justify-between items-center text-tochi-brown mlg:flex-col mmd:px-12 mxs:px-10">
+    <section className="w-full min-h-[30vh] relative bg-lcc-yellow px-24 pt-24 pb-12 flex justify-between items-center text-tochi-brown mlg:flex-col mmd:px-12 mxs:px-10">
       <div className="w-[40%] flex flex-col justify-center items-center text-center mlg:w-full mxxss:w-[80%]">
         <div>
           <p className="text-2xl mb-8 font-semibold mxs:text-sm">When</p>

@@ -1,4 +1,4 @@
-import { Navigation } from "../../components";
+import { Navigation, Footer } from "../../components";
 import {
   HeroSection,
   InfoSection,
@@ -29,6 +29,7 @@ const HomePage = () => {
       <WishSection />
       <PhotoGallerySection />
       <TestimonialSection />
+      <Footer background="ifeoma-green"/>
     </motion.section>
   );
 };

@@ -26,9 +26,9 @@ const LoveSection = () => {
 
   // Animation variants for fading in and out
   const fadeVariant = {
-    enter: { opacity: 0, scale: 0.95 },
-    center: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 0.95 },
+    enter: { opacity: 0, scale: 0.95, zIndex: 0 },
+    center: { opacity: 1, scale: 1, zIndex: 1 },
+    exit: { opacity: 0, scale: 0.95, zIndex: 0 },
   };
 
   return (
@@ -46,7 +46,7 @@ const LoveSection = () => {
           </p>
           <p className="font-playwrite text-2xl">- Tochi & Ifeoma</p>
         </div>
-        
+
         <div className="w-[50%] mmd:w-full relative">
           <AnimatePresence mode="wait">
             <motion.img
@@ -54,7 +54,7 @@ const LoveSection = () => {
               src={photos[currentIndex]} // Only render the current image
               alt="Pastors' Picture"
               className="w-full h-[30rem] object-cover rounded-3xl"
-              style={{ objectPosition: "0% 5%" }}
+              style={{ objectPosition: "0% 5%",  }}
               initial="enter"
               animate="center"
               exit="exit"

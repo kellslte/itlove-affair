@@ -42,7 +42,7 @@ const Navigation = () => {
               {navLink.link}
             </Link>
           ))}
-          <Button text="Reserve an Invite" />
+          <Button text="Send us a wish" />
         </div>
       ) : (
         <>
