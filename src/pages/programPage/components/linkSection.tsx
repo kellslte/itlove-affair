@@ -3,13 +3,13 @@ import { GoLink } from "react-icons/go";
 
 const LinkSection = () => {
   return (
-    <section className="w-full min-h-[30vh] relative bg-[inherit] px-24 pt-24 pb-12 flex justify-between items-start text-tochi-brown mlg:flex-col mmd:px-12 mxs:px-10 mxs:pt-4">
-      <div className="w-[40%] flex flex-col justify-center items-center text-center mlg:w-full mxxss:w-[80%]">
+    <section className="w-full min-h-[30vh] relative bg-[inherit] px-24 pt-24 pb-12 flex justify-between items-start text-tochi-brown mlg:flex-col mmd:px-12 mxs:px-0 mxs:pt-4">
+      <div className="w-[40%] flex flex-col justify-center items-center text-center mlg:w-full">
         <div>
           <p className="text-2xl font-semibold">
             Stream our ceremony
           </p>
-          <p className="text-sm mb-6 font-light mlg:mb-6 mxs:text-[0.5rem] mxs:leading-normal">
+          <p className="text-sm mb-6 font-light mlg:mb-6 mxs:text-[0.7rem] mxs:leading-normal">
             Though you can't be here in person, we're thrilled to have you with
             us in spirit. Join our wedding ceremony live by clicking the link
             below to stream and share in the joy of our big day from wherever
@@ -26,10 +26,10 @@ const LinkSection = () => {
         </div>
       </div>
       <div className="bg-tochi-brown mlg:w-full mlg:h-[0.0625rem] mlg:my-12 mxs:w-full mxs:my-6"></div>
-      <div className="w-[40%] flex flex-col justify-center items-center text-center mlg:w-full mxxss:w-[80%]">
+      <div className="w-[40%] flex flex-col justify-center items-center text-center mlg:w-full">
         <div>
           <p className="text-2xl font-semibold">Share in our joy</p>
-          <p className="text-sm mb-6 font-light mlg:mb-6 mxs:text-[0.5rem] mxs:leading-normal">
+          <p className="text-sm mb-6 font-light mlg:mb-6 mxs:text-[0.7rem] mxs:leading-normal">
             We want to see the day through your eyes! If you took any
             pictures during our ceremony, please share them in our
             photo album either by scanning the QR code below or

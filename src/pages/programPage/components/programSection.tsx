@@ -65,11 +65,11 @@ const ProgramSection = () => {
   return (
     <section className="w-full my-10 flex justify-between items-center gap-4 mmd:flex-col mmd:gap-8">
       <div className="w-1/2 mmd:w-full">
-        <div className="mb-4">
+        <div className="mb-4 text-tochi-brown">
           <p className="text-2xl font-semibold">
             Download the Wedding Programme
           </p>
-          <p className="text-base mmd:text-justify">
+          <p className="text-base  mmd:text-justify">
             Join us in celebrating each beautiful moment of this special day!
             Download the programme of events to follow along and share in every
             heartfelt moment planned for the ceremony.
