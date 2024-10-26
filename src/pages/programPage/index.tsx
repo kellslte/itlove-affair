@@ -35,12 +35,12 @@ const ProgramPage = () => {
       </div>
       <section className="px-24 py-4 mlg:px-14 mxs:px-10">
         <div>
-          <p className="text-center font-[600] text-[2rem]">Programme Page</p>
+          <p className="text-center text-tochi-brown font-[600] text-[2rem]">Programme Page</p>
         </div>
         <ProgramSection />
         <LinkSection />
         <VendorSection />
-        <div className="relative flex flex-col justify-center items-center gap-4 pt-16 pb-4 text-center text-tochi-brown">
+        <div className="relative flex flex-col justify-center items-center gap-4 pt-8 pb-4 text-center text-tochi-brown">
           <p className="text-[1rem] font-averta">#ITLoveAffair</p>
           <p className="text-[1rem] font-averta">©2024</p>
         </div>
