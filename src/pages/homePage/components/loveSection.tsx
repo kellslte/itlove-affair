@@ -26,9 +26,9 @@ const LoveSection = () => {
 
   // Animation variants for fading in and out
   const fadeVariant = {
-    enter: { opacity: 0.1, scale: 0, zIndex: 0 },
-    center: { opacity: 1, scale: 1, zIndex: 1 },
-    exit: { opacity: 0.1, scale: 0, zIndex: 0 },
+    enter: { opacity: 0, scale: 0.95},
+    center: { opacity: 1, scale: 1},
+    exit: { opacity: 0, scale: 1.05},
   };
 
   return (
@@ -66,7 +66,7 @@ const LoveSection = () => {
               animate="center"
               exit="exit"
               variants={fadeVariant}
-              transition={{ duration: 0.8, ease: [0, 0.71, 0.2, 1.01] }} 
+              transition={{ duration: 0.8, ease: [0.445, 0.050, 0.550, 0.950] }} 
             />
           </AnimatePresence>
         </div>
