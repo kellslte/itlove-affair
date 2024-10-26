@@ -1,15 +1,19 @@
 import { Button } from "../ui";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "@uidotdev/usehooks";
-import { useState, useEffect } from "react";
-import {motion} from "framer-motion"
+import React, { useState, useEffect } from "react";
+import {motion} from "framer-motion";
 
-const Navigation = () => {
+interface NavProps{
+  openModal: () => void
+}
+
+const Navigation: React.FC<NavProps> = ({openModal}) => {
   const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
 
   const navLinks = [
     { link: "Wishlist", route: "/wishlist" },
-    { link: "View Program", route: "/program" },
+    { link: "View Programme", route: "/programme" },
   ];
 
   const [mblNavOpen, setMblNavOpen] = useState<boolean>(false);
@@ -29,7 +33,7 @@ const Navigation = () => {
         initial = {{opacity: 0, y: -250}}
         animate = {{opacity: 1, y: 0}}
         >
-        <Link to="/" className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-pastor-blue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">#ITloveaffair24</Link>
+        <Link to="/" className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-pastor-blue after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center">#ITLoveAffair24</Link>
       </motion.p>
       {!isSmallDevice ? (
         <div className="flex items-center justify-center gap-4">
@@ -42,7 +46,7 @@ const Navigation = () => {
               {navLink.link}
             </Link>
           ))}
-          <Button text="Reserve an Invite" />
+          <Button text="Send us a wish" onClick={openModal}/>
         </div>
       ) : (
         <>
@@ -58,6 +62,7 @@ const Navigation = () => {
             isOpen={mblNavOpen}
             navLinks={navLinks}
             closeNav={closeMblNav}
+            openModal={openModal}
           />
         </>
       )}
@@ -71,12 +76,14 @@ interface MobileNavProps {
   isOpen: boolean;
   navLinks: { link: string; route: string }[];
   closeNav: () => void;
+  openModal: () => void
 }
 
 export const MobileNavigation: React.FC<MobileNavProps> = ({
   isOpen,
   navLinks,
   closeNav,
+  openModal
 }) => {
   // Close the menu when clicking outside the menu area
   useEffect(() => {
@@ -112,7 +119,7 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
       >
         <div className="w-full h-16 bg-lcc-yellow flex justify-between items-center px-6">
           <Link to ="/" className="font-playwrite font-normal text-pastor-blue mxxxs:text-sm">
-            #ITLoveaffair24
+            #ITLoveAffair24
           </Link>
           <button
             onClick={closeNav}
@@ -133,7 +140,7 @@ export const MobileNavigation: React.FC<MobileNavProps> = ({
               {navLink.link}
             </Link>
           ))}
-          <Button text="Reserve an Invite" onClick={closeNav} />
+          <Button text="Send us a wish" onClick={openModal} />
         </div>
       </div>
     </>

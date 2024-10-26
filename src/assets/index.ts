@@ -24,6 +24,9 @@ import Car from "./wish-car.webp";
 import Gen from "./wish-gen.webp";
 import Fridge from "./wish-fridge.webp";
 import Wash from "./wish-wash-mach.webp";
+import FirstProgramPage from "./page-1.png";
+import SecondProgramPage from "./page-2.png";
+import ThirdProgramPage from "./page-3.png";
 
 export {
   LeftBottom,
@@ -51,5 +54,8 @@ export {
   Car,
   Gen,
   Fridge,
-  Wash
+  Wash,
+  FirstProgramPage,
+  SecondProgramPage,
+  ThirdProgramPage
 };

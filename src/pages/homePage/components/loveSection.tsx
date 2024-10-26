@@ -26,9 +26,9 @@ const LoveSection = () => {
 
   // Animation variants for fading in and out
   const fadeVariant = {
-    enter: { opacity: 0, scale: 0.95 },
-    center: { opacity: 1, scale: 1 },
-    exit: { opacity: 0, scale: 0.95 },
+    enter: { opacity: 0, scale: 0.95},
+    center: { opacity: 1, scale: 1},
+    exit: { opacity: 0, scale: 1.05},
   };
 
   return (
@@ -39,7 +39,7 @@ const LoveSection = () => {
 
       <div className="w-full flex justify-between items-center gap-6 mt-8 mmd:flex-col-reverse">
         <div className="w-[50%] flex flex-col gap-6 mmd:w-full">
-          <p className="text-2xl mxs:text-lg">
+          <p className="text-2xl text-justify mxs:text-lg">
             “I first met Ifeoma when she came to write her exams in my school. I
             was in my penultimate year of university at the time, We quickly
             became good friends after she gained admission, bonding over many of
@@ -51,7 +51,7 @@ const LoveSection = () => {
             without diverse life’s twists and turns years before), and here we
             are today… in love with each other and finally getting married…”
           </p>
-          <p className="text-2xl">- Tochi & Ifeoma</p>
+          <p className="text-3xl font-medium">- Tochi & Ifeoma</p>
         </div>
 
         <div className="w-[50%] mmd:w-full relative">
@@ -61,12 +61,12 @@ const LoveSection = () => {
               src={photos[currentIndex]} // Only render the current image
               alt="Pastors' Picture"
               className="w-full h-[30rem] object-cover rounded-3xl"
-              style={{ objectPosition: "0% 5%" }}
+              style={{ objectPosition: "0% 5%",  }}
               initial="enter"
               animate="center"
               exit="exit"
               variants={fadeVariant}
-              transition={{ duration: 0.8 }} // Adjust the duration of fade
+              transition={{ duration: 0.8, ease: [0.445, 0.050, 0.550, 0.950] }} 
             />
           </AnimatePresence>
         </div>

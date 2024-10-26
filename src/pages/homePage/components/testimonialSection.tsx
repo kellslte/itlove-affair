@@ -10,8 +10,6 @@ import 'swiper/css/effect-fade';
 const TestimonialSection = () => {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
 
-
-
   const slides = [
     {
       testimony:
@@ -40,7 +38,7 @@ const TestimonialSection = () => {
     },
     {
       testimony:
-        "God's endless blessings and goodness. Wishing Pastor Tochi and Pastor Ifeoma a beautiful and happy married life. Congratulations!",
+        "My Pastors are getting married!🥹🥹<br/> Nah, I’m too excited for this one. Congratulations, Pastor Tochi and Pastor Ifeoma. This home is blessed and preserved by the mighty hand of God!!💕",
       author: "Obianuju Afamefuna",
     },
     {
@@ -60,7 +58,11 @@ const TestimonialSection = () => {
     },
     {
       testimony: `This wedding has me super excited!!!!<br/> I'm "extremmmmmely" happy for Pastor Tochi and Pastor Ifeoma.🤭 <br/> Cheers to building a beautiful, godly home.<br/> Congratulations!`,
-      author: "Chinenye Abonyi",
+      author: "Chinonye Abonyi",
+    },
+    {
+      testimony: `I’m beyond excited to witness this beautiful union! A huge congratulations to Pastor Tochi and Pastor Ifeoma on this incredible journey. May your marriage be filled with love, joy, and countless blessings as you build a strong and godly home together.`,
+      author: "Perpetual Ozofor",
     },
     {
       testimony:
@@ -97,7 +99,7 @@ const TestimonialSection = () => {
                     isActive ? "bg-white " : "invisible"
                   } flex justify-center items-center flex-col gap-6 rounded-lg p-4 h-[20rem]`}
                 >
-                  <p className="text-center font-light text-2xl w-[60%] mxl:w-[80%] mlg:text-xl mmd:text-lg msm:text-base mxs:text-sm mxs:w-full" dangerouslySetInnerHTML={{__html: slide.testimony}}>
+                  <p className="text-center font-light text-2xl w-[70%] mxl:w-[80%] mlg:text-xl mmd:text-lg msm:text-base mxs:text-sm mxs:w-full" dangerouslySetInnerHTML={{__html: slide.testimony}}>
                   </p>
                   <p className="text-center font-medium text-2xl mlg:text-xl mmd:text-lg">
                     ~{slide.author}~

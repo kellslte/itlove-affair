@@ -45,9 +45,9 @@ const Modal: React.FC<ModalProps> = ({id, isOpen, onClose, title }) => {
         window.location.href = checkout_url;
       }
       setSubmitting(false);
-      console.log(data)
+      
     } catch (err) {
-      console.log(err);
+      
       setSubmitting(false);
     }
   };

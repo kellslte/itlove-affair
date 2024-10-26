@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { CountdownTimer, CountupTimer } from "../../../components";
-import { RightBottom, } from "../../../assets";
+import { RightBottom } from "../../../assets";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 
@@ -9,6 +9,11 @@ const HeroSection = () => {
   const [weddingToday, setWeddingToday] = useState<boolean>(false);
 
   const targetDate = "2024-10-26T00:00:00"; //Date of the wedding
+
+  const handleCountdownEnd = () => {
+    setWeddingDone(true);
+    setWeddingToday(true); // This triggers confetti and "It's Today" message
+  };
 
   const checkTodayDate = (date: string) => {
     const todayDate = new Date().toISOString().split("T")[0];
@@ -64,57 +69,27 @@ const HeroSection = () => {
             Ifeoma & Tochi
           </p>
         </div>
-        <div className="flex justify-center items-center gap-6 ">
-          <p className="text-tochi-brown text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
-            OCTOBER 26, 2024
-          </p>
-          <div className="w-1 h-1 bg-tochi-brown rounded-full"></div>
-          <p className="text-tochi-brown text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
-            ENUGU, NIGERIA
-          </p>
-        </div>
-
-        <div className="absolute bottom-[40%] w-full flex items-center justify-center">
-          <motion.div
-            className="h-auto w-[18rem] absolute bg-white z-40 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
-            style={{ x: x1, y: y1, rotate: -10 }}
-            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
-          >
-            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727827837/wedding/main-image.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
-          </motion.div>
-
-          <motion.div
-            className="h-auto w-[18rem] bg-white absolute z-30 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
-            style={{ x: x2, y: y2, rotate: 5 }}
-            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
-          >
-            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/vintage-normal.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
-          </motion.div>
-
-          <motion.div
-            className="h-auto w-[18rem] bg-white absolute z-20 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
-            style={{ x: x3, y: y3, rotate: 21 }}
-            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
-          >
-            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/main-close.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
-          </motion.div>
-
-          <motion.div
-            className="h-auto w-[18rem] bg-white absolute z-10 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
-            style={{ x: x4, y: y4, rotate: -15 }}
-            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
-          >
-            <img src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831558/wedding/vintage-goofy.webp`} alt="Image of the couple" className="w-full h-full bg-cover p-2" />
-          </motion.div>
+        <div className="flex flex-col justify-center items-center">
+          <div className="flex justify-center items-center gap-6">
+            <p className="text-tochi-brown text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
+              OCTOBER 26, 2024
+            </p>
+            <div className="w-1 h-1 bg-tochi-brown rounded-full"></div>
+            <p className="text-tochi-brown text-xl mxs:text-center mxs:text-sm mxxxs:text-xs">
+              ENUGU, NIGERIA
+            </p>
+          </div>
 
           {weddingToday ? (
             <div className="relative z-[1] my-6 flex justify-center items-center gap-1 mxs:flex-col">
-              <p className="text-lg text-tochi-brown mmd:text-sm">IT'S TODAY!</p>
+              <p className="text-lg text-tochi-brown mmd:text-sm">
+                IT'S TODAY!
+              </p>
               <Fireworks autorun={{ speed: 3, duration: 999999 }} />
             </div>
           ) : !weddingDone ? (
             <div className="relative z-[1] my-6 flex justify-center items-center gap-1 mxs:flex-col">
-              <CountdownTimer targetDate={targetDate} />
+              <CountdownTimer targetDate={targetDate} onCountdownEnd={handleCountdownEnd} />
               <p className="text-lg text-tochi-brown mmd:text-sm">TO GO!</p>
             </div>
           ) : (
@@ -123,6 +98,56 @@ const HeroSection = () => {
               <p className="text-lg text-tochi-brown mmd:text-sm">GONE!</p>
             </div>
           )}
+        </div>
+
+        <div className="absolute bottom-[40%] w-full flex items-center justify-center">
+          <motion.div
+            className="h-auto w-[18rem] absolute bg-white z-40 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
+            style={{ x: x1, y: y1, rotate: -10 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
+          >
+            <img
+              src={`https://res.cloudinary.com/tochukwu/image/upload/v1727827837/wedding/main-image.webp`}
+              alt="Image of the couple"
+              className="w-full h-full bg-cover p-2"
+            />
+          </motion.div>
+
+          <motion.div
+            className="h-auto w-[18rem] bg-white absolute z-30 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
+            style={{ x: x2, y: y2, rotate: 5 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
+          >
+            <img
+              src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/vintage-normal.webp`}
+              alt="Image of the couple"
+              className="w-full h-full bg-cover p-2"
+            />
+          </motion.div>
+
+          <motion.div
+            className="h-auto w-[18rem] bg-white absolute z-20 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
+            style={{ x: x3, y: y3, rotate: 21 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
+          >
+            <img
+              src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831185/wedding/main-close.webp`}
+              alt="Image of the couple"
+              className="w-full h-full bg-cover p-2"
+            />
+          </motion.div>
+
+          <motion.div
+            className="h-auto w-[18rem] bg-white absolute z-10 mmd:w-[16rem] msm:w-[14rem] mxs:w-[13rem] mxxss:w-[11.5rem]"
+            style={{ x: x4, y: y4, rotate: -15 }}
+            transition={{ duration: 50, ease: "easeIn", delay: 10 }}
+          >
+            <img
+              src={`https://res.cloudinary.com/tochukwu/image/upload/v1727831558/wedding/vintage-goofy.webp`}
+              alt="Image of the couple"
+              className="w-full h-full bg-cover p-2"
+            />
+          </motion.div>
         </div>
       </div>
 
