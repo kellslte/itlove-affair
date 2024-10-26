@@ -34,3 +34,11 @@ export const updateTransactionDetails = async (reference: string) => {
     url: `${baseUrl}/donate/transaction/${reference}/confirm`,
   });
 }
+
+export const sendWishes = async(wish: any) => {
+  return await axios({
+    method: "POST",
+    url: `${baseUrl}/wellwishes`,
+    data: wish
+  })
+}

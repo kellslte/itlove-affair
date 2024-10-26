@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Navigation } from "../../components";
 import { WishItem } from "./components";
-import { Modal, Loader } from "../../ui";
+import { Modal, Loader, WishModal } from "../../ui";
 import { motion } from "framer-motion";
 import { fetchGifts } from "../../api/api";
 
 const WishListPage = () => {
+  const [isWishModalOpen, setIsWishModalOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState<boolean>(true);
   const [selectedWishItem, setSelectedWishItem] = useState<{
@@ -20,6 +21,15 @@ const WishListPage = () => {
       behavior: 'smooth'
     })
   }
+
+  const openWishModal = () => {
+    setIsWishModalOpen(true)
+    scrollTop()
+  }
+
+  const closeWishModal = () => {
+    setIsWishModalOpen(false);
+  };
 
   const openModal = (wishItem: { title: string; id: string }) => {
     setSelectedWishItem(wishItem);
@@ -37,7 +47,7 @@ const WishListPage = () => {
       setLoading(true);
       try {
         const { data } = await fetchGifts();
-        console.log(data);
+        
         setData(data);
         setLoading(false);
       } catch (error) {
@@ -49,7 +59,7 @@ const WishListPage = () => {
   }, []);
 
   const giftItems = data?.data?.gifts;
-  console.log(giftItems);
+  
 
   return (
     <motion.section
@@ -61,7 +71,7 @@ const WishListPage = () => {
     >
       <section className="">
         <div className="sticky top-0 z-[100] bg-white/30 backdrop-blur-lg">
-          <Navigation />
+          <Navigation openModal={openWishModal} />
         </div>
         <section className="bg-[#FFF2DE] min-h-screen px-24 py-4 mlg:px-14 mxs:px-10">
           <div>
@@ -93,6 +103,10 @@ const WishListPage = () => {
             </div>
           )}
         </section>
+        <div className="relative flex flex-col justify-center items-center gap-4 pt-16 pb-4 text-center text-pastor-blue">
+          <p className="text-[1rem] font-averta">#ITLoveAffair</p>
+          <p className="text-[1rem] font-averta">©2024</p>
+        </div>
       </section>
 
       {selectedWishItem && (
@@ -103,6 +117,7 @@ const WishListPage = () => {
           id={selectedWishItem.id}
         />
       )}
+      <WishModal onClose={closeWishModal} isOpen = {isWishModalOpen}/>
     </motion.section>
   );
 };

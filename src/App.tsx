@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Loader } from "./ui";
+import { Toaster } from 'sonner'
 
 // Lazy load the components
 const HomePage = lazy(() => import('./pages').then(module => ({ default: module.HomePage })));
@@ -22,11 +23,12 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<ErrorPage />} />
             <Route path="/wishlist" element={<WishListPage />} />
-            <Route path="/program" element={<ProgramPage />} />
+            <Route path="/programme" element={<ProgramPage />} />
             <Route path="/send-money" element={<ProgramPage />} />
             <Route path ="/donate/success" element={<SuccessPage/>}/>
           </Routes>
         </AnimatePresence>
+        <Toaster richColors={true} position="top-right" expand={true}/>
       </Suspense>
     </>
   );

@@ -9,3 +9,8 @@ export const makeAWishSchema = z.object({
   phonenumber: z.string().regex(phoneNumberRegExp, { message: 'Phone number entered is not valid' }),
   amount: z.number().nonnegative({message: "Amount must be a negative number"}).min(1, {message: "Amount must be at least 1"})
 })
+
+export const sendAWishSchema = z.object({
+  name: z.string().min(1, {message: "Please, enter your full name"}),
+  message: z.string().min(1, {message: "Please, leave a wish for us"})
+})

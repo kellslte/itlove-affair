@@ -38,7 +38,7 @@ const TestimonialSection = () => {
     },
     {
       testimony:
-        "God's endless blessings and goodness. Wishing Pastor Tochi and Pastor Ifeoma a beautiful and happy married life. Congratulations!",
+        "My Pastors are getting married!🥹🥹<br/> Nah, I’m too excited for this one. Congratulations, Pastor Tochi and Pastor Ifeoma. This home is blessed and preserved by the mighty hand of God!!💕",
       author: "Obianuju Afamefuna",
     },
     {

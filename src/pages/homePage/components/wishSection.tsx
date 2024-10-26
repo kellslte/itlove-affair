@@ -47,7 +47,7 @@ const WishSection = () => {
           <div className="bg-[#E0B807] rounded-full" onClick={openModal}>
             <Button
               text="Send Cash"
-              customClassName="text-white bg-[#E0B807]"
+              customClassName="text-white bg-[#E0B807] "
             />
           </div>
         </div>

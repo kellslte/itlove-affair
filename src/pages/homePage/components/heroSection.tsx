@@ -10,6 +10,11 @@ const HeroSection = () => {
 
   const targetDate = "2024-10-26T00:00:00"; //Date of the wedding
 
+  const handleCountdownEnd = () => {
+    setWeddingDone(true);
+    setWeddingToday(true); // This triggers confetti and "It's Today" message
+  };
+
   const checkTodayDate = (date: string) => {
     const todayDate = new Date().toISOString().split("T")[0];
     const targetDate = date.split("T")[0];
@@ -84,7 +89,7 @@ const HeroSection = () => {
             </div>
           ) : !weddingDone ? (
             <div className="relative z-[1] my-6 flex justify-center items-center gap-1 mxs:flex-col">
-              <CountdownTimer targetDate={targetDate} />
+              <CountdownTimer targetDate={targetDate} onCountdownEnd={handleCountdownEnd} />
               <p className="text-lg text-tochi-brown mmd:text-sm">TO GO!</p>
             </div>
           ) : (
