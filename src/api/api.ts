@@ -6,7 +6,10 @@ export const donateCash = async (donation: any) => {
   return await axios({
     method: "POST",
     url: `${baseUrl}/donate/cash`,
-    data: donation,
+    data: {
+      ...donation,
+      callback_url: `${window.location.origin}/donate/success`,
+    },
   });
 };
 
